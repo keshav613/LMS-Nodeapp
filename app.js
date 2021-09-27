@@ -5,9 +5,9 @@ var setupRouter = require("./router/setupRouter");
 var apiRouter = require("./router/apiRouter");
 
 var port = 80 || process.env.PORT;
-var uname = "keshav",
-  pwd = "forgotpassword",
-  dbName = "lms";
+var uname = process.env.uname,
+  pwd = process.env.pwd,
+  dbName = process.env.dbname;
 var dbstring = `mongodb+srv://${uname}:${pwd}@keshav-lms.biuic.mongodb.net/${dbName}?retryWrites=true&w=majority`;
 
 console.log(`Application starting, listening at PORT ${port}`);
