@@ -57,10 +57,6 @@ route.post("/books", function (req, res) {
       }
     );
   } else {
-    // {
-    //   "bookName": "Harry Potter and the Philosopher's Stone",
-    //   "author": "J. K. Rowling"
-    // }
     var newBook = books({
       user: "admin",
       bookName: req.body.bookName,
